@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.matt.minhasfinancas.api.dto.UsuarioDTO;
 import com.matt.minhasfinancas.model.entity.Usuario;
 import com.matt.minhasfinancas.service.UsuarioService;
-import com.matt.minhasfinancas.service.exception.ErroAutenticacao;
-import com.matt.minhasfinancas.service.exception.RegraNegocioException;
+import com.matt.minhasfinancas.exception.ErroAutenticacao;
+import com.matt.minhasfinancas.exception.RegraNegocioException;
 
 @RestController
 @RequestMapping("/api/usuarios")

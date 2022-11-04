@@ -1,4 +1,4 @@
-package com.matt.minhasfinancas.service.exception;
+package com.matt.minhasfinancas.exception;
 
 public class ErroAutenticacao extends RuntimeException{
 	

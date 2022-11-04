@@ -7,14 +7,16 @@ import java.util.List;
 
 public interface LancamentoService {
 
-    Lancamento Salvar(Lancamento lancamento);
+    Lancamento salvar(Lancamento lancamento);
 
-    Lancamento Atualizar (Lancamento lancamento);
+    Lancamento atualizar (Lancamento lancamento);
 
     void deletar (Lancamento lancamento);
 
     List<Lancamento> buscar(Lancamento lancamentoFiltro);
 
     void atualizarStatus(Lancamento lancamento, StatusLancamento status);
+
+    void validar(Lancamento lancamento);
 
 }

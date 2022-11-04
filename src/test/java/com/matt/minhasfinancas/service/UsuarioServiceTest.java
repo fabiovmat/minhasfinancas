@@ -8,7 +8,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import com.matt.minhasfinancas.model.entity.Usuario;
 import com.matt.minhasfinancas.model.repository.UsuarioRepository;
-import com.matt.minhasfinancas.service.exception.RegraNegocioException;
+import com.matt.minhasfinancas.exception.RegraNegocioException;
 
 
 @ActiveProfiles("test")

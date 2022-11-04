@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import com.matt.minhasfinancas.model.entity.Usuario;
 import com.matt.minhasfinancas.model.repository.UsuarioRepository;
 import com.matt.minhasfinancas.service.UsuarioService;
-import com.matt.minhasfinancas.service.exception.ErroAutenticacao;
-import com.matt.minhasfinancas.service.exception.RegraNegocioException;
+import com.matt.minhasfinancas.exception.ErroAutenticacao;
+import com.matt.minhasfinancas.exception.RegraNegocioException;
 
 
 
