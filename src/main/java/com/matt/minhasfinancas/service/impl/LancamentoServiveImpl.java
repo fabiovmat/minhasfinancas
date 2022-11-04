@@ -21,7 +21,7 @@ public class LancamentoServiveImpl implements LancamentoService {
 
     private LancamentoRepository repository;
 
-    public LancamentoServiveImpl(LancamentoRepository lancamentoRepository){
+    public LancamentoServiveImpl(LancamentoRepository repository){
         this.repository = repository;
     }
 
@@ -50,21 +50,12 @@ public class LancamentoServiveImpl implements LancamentoService {
     @Override
     @Transactional(readOnly = true)
     public List<Lancamento> buscar(Lancamento lancamentoFiltro) {
+        Example example = Example.of( lancamentoFiltro,
+                ExampleMatcher.matching()
+                        .withIgnoreCase()
+                        .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING) );
 
-        Example example = Example.of(lancamentoFiltro, ExampleMatcher.matching()
-                .withIgnoreCase()
-                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING));
-                return  repository.findAll(example);
-
-
-                /* substituido por EXAMPlE acima
-
-        String sql = "select * from lancamento where 1 - 1";
-                if(lancamentoFiltro.getDescricao() != null){
-            sql = sql + " and descricao = " + lancamentoFiltro.getDescricao();
-        }*/
-
-
+        return repository.findAll(example);
     }
 
     @Override
@@ -87,7 +78,7 @@ public class LancamentoServiveImpl implements LancamentoService {
             throw new RegraNegocioException("Informe um ano válido");
         }
 
-        if (lancamento.getUsuario() == null || lancamento.getId() == null) {
+        if (lancamento.getUsuario() == null || lancamento.getUsuario().getId() == null) {
             throw new RegraNegocioException("Informe um Usuário");
         }
 

@@ -1,6 +1,6 @@
 package com.matt.minhasfinancas.service;
 
-import com.matt.minhasfinancas.model.entity.Lancamento;
+
 import com.matt.minhasfinancas.model.entity.Usuario;
 
 import java.util.Optional;

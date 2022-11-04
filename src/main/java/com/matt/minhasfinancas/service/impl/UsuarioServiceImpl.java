@@ -18,7 +18,7 @@ import com.matt.minhasfinancas.exception.RegraNegocioException;
 public class UsuarioServiceImpl implements UsuarioService {
 
 	
-	private UsuarioRepository repository;
+	private final UsuarioRepository repository;
 	
 	
 	public UsuarioServiceImpl(UsuarioRepository repository) {
